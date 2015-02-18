@@ -9,15 +9,14 @@
 #import "WizardOfOz.h"
 
 @implementation WizardOfOz
-
 - (BOOL) switchesFromBlackAndWhiteToColor {
-    /* WORK HERE */
-    return NO;
+/* WORK HERE */
+    return YES;
 }
 
 - (NSString *) mainCharacter {
     /* WORK HERE */
-    return @"";
+    return @"Dorothy";
 }
 
 @end
