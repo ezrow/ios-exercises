@@ -12,17 +12,23 @@
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     /* WORK HERE */
-    return (string1 == string2);
+    //BOOL b = string1 == string2; why does this not work for strings
+    BOOL b = [string1 isEqualToString:string2];
+	//NSLog(@"Bool value: %d",b);
+    
+    return b;
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
     /* WORK HERE */
-    return (number1 == number2);
+    BOOL b = [number1 isEqualToNumber:number2];
+    return b;
 }
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
     /* WORK HERE */
-    return NO;
+    BOOL b = integer1 > integer2;
+    return b;
 }
 
 @end
