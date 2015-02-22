@@ -35,7 +35,7 @@
     NSString *purchasableItem = [self.appleHandler itemMaryCanPurchaseForDollars:4];
     XCTAssertEqualObjects(purchasableItem, @"get out of my store", @"If Mary has $4, she should be told to get out.");
 }
-
+			
 - (void)testThatMaryCanPurchaseGumFor5Dollars {
     NSString *purchasableItem = [self.appleHandler itemMaryCanPurchaseForDollars:5];
     XCTAssertEqualObjects(purchasableItem, @"have some gum", @"If Mary has $5, she should receive an offer to purchase gum.");
@@ -44,6 +44,7 @@
 - (void)testThatMaryCanPurchaseAnAppleFor6Dollars {
     NSString *purchasableItem = [self.appleHandler itemMaryCanPurchaseForDollars:6];
     XCTAssertEqualObjects(purchasableItem, @"have an apple", @"If Mary has $6, she should receive an offer to purchase an apple.");
+    	
 }
 
 - (void)testThatMaryCanPurchaseAnAppleComputerFor1000Dollars {
