@@ -20,25 +20,35 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+var numberArray = [1, 2, 3, 4]
 // Add 5 to this array
 // WORK HERE
+numberArray.append(5)
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
+numberDictionary[5]="five"
+
+for (key, value) in numberDictionary {
+    println("key: \(key) value: \(value)")
+}
 
 /*
-
 Loops
-
 */
 
 // Use a closed range loop to print 1 - 10, inclusively
 // WORK HERE
+for x in 1 ... 10 {
+    println(x)
+}
 
-// Use a half-closed range loop to print 1 - 10, inclusively
+// Use a to print 1 - 10, inclusively
 // WORK HERE
+for i in 0..<11 {
+    println (i)
+}
 
 let worf = [
     "name": "Worf",
@@ -58,7 +68,16 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:Array<Dictionary<String, String>>) -> Array<String> {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
-    return []
+    //var favoriteDrinksArray: [String] = [""]
+    var favoriteDrinksArray = [String]()
+    
+    
+    for p in characters {
+        //println(p["favorite drink"])
+        favoriteDrinksArray.append(p["favorite drink"]!)
+ 
+    }
+    return favoriteDrinksArray
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -72,20 +91,31 @@ Functions
 */
 
 // Make a function that inputs an array of strings and outputs the strings separated by a semicolon
-
 let strings = ["milk", "eggs", "bread", "challah"]
 
-// WORK HERE - make your function and pass `strings` in
+func outputStrings(myArray:[String]) -> String{
+    var str=""
+    for s in myArray{
+        if (str==""){
+            str=s
+        }else{
+            str+=";"+s
+        }
+    }
+    return str
+}
+
+println (outputStrings (strings))
 
 let expectedOutput = "milk;eggs;bread;challah"
-
 /*
-
 Closures
-
 */
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
 
 // Use a closure to sort this array alphabetically
-// WORK HERE
+let wizardsSortedByDarkArtsGrade = sorted(cerealArray, <)
+println(wizardsSortedByDarkArtsGrade)
+
+
